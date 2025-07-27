@@ -133,24 +133,31 @@
 <!-- Countdown Timer Ends Here -->
 
 
-  <script src="https://js.paystack.co/v1/inline.js"></script>
-  <script>
-    function payWithPaystack() {
-      var handler = PaystackPop.setup({
-        key: 'pk_live_bab6740832dad1a3a529102fc1ba88f07c60f647', // Replace with your actual public key
-        email: 'buyer@email.com',
-        amount: 9900,
-        currency: 'GHS',
-        callback: function(response){
-          window.location.href = 'https://drive.google.com/drive/folders/1QWv2k4Vq56R5ZbW12DC9NwcoyWrEoBgO';
-        },
-        onClose: function(){
-          alert('Payment was cancelled. Try again to unlock the playbook.');
-        }
-      });
-      handler.openIframe();
+ <script>
+  function payWithPaystack() {
+    let email = prompt("Enter your email to receive the playbook:");
+    if (!email || !email.includes("@")) {
+      alert("Please enter a valid email address.");
+      return;
     }
-  </script>
+
+    var handler = PaystackPop.setup({
+      key: 'pk_live_bab6740832dad1a3a529102fc1ba88f07c60f647', // your real key
+      email: email,
+      amount: 9900, // ₵99 in pesewas
+      currency: 'GHS',
+      callback: function(response){
+        alert('Payment successful! Ref: ' + response.reference);
+        window.location.href = 'https://drive.google.com/drive/folders/1QWv2k4Vq56R5ZbW12DC9NwcoyWrEoBgO'; // Your redirect link
+      },
+      onClose: function(){
+        alert('Payment cancelled.');
+      }
+    });
+    handler.openIframe();
+  }
+</script>
+
   <script>
   // Timer countdown logic
   let timeInMinutes = 30;
