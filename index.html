@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>₵99 Playbook</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0f0f0f;
+      color: #f2f2f2;
+      line-height: 1.7;
+    }
+    #countdown-timer {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ff4d4f;
+  background: #1a1a1a;
+  padding: 14px 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h1, h2 {
+      color: #ffffff;
+    }
+
+    p {
+      color: #ccc;
+      margin-bottom: 22px;
+      font-size: 17px;
+    }
+
+    .highlight {
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .divider {
+      margin: 50px 0;
+      border-top: 1px solid #333;
+    }
+
+    .cta-button {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, #00d084, #009e66);
+      color: #fff;
+      padding: 18px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 30px;
+    }
+
+    .cta-button:hover {
+      background: linear-gradient(135deg, #00b377, #007d50);
+    }
+
+    .disclaimer {
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 40px 20px;
+      }
+      .cta-button {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>So… is it really possible to make ₵1,000 in 5 days?</h1>
+    <p><strong>Honestly?</strong> Yes — but only if you understand one thing: how attention turns into value, and value into cash.</p>
+    <p>In the video, I told you how I went from rock bottom — no job, just a cracked iPhone — to making ₵1,000+ in days…</p>
+    <p>…by selling a simple digital product I made in one night.</p>
+    <p>No team. No capital. Just a system most people overlook.</p>
+
+    <div class="divider"></div>
+
+    <h2>The Real Problem?</h2>
+    <p>Most broke people aren’t lazy. They’re just doing the <em>right things</em> in the <strong>wrong order</strong>.</p>
+    <p>I didn’t hustle. I didn’t “grind.”</p>
+    <p>I just did 3 things right:</p>
+    <ol>
+      <li>⚡ I picked a specific need people were already begging for</li>
+      <li>⚡ I delivered value fast — without overthinking</li>
+      <li>⚡ I used a ₵99 funnel that worked even with 10 followers</li>
+    </ol>
+
+    <div class="divider"></div>
+
+    <div class="highlight">
+      <h2>Now That You’ve Seen It…</h2>
+      <p>Here’s What the Quiet Top 1% Are Doing Differently.</p>
+      <p>They don’t chase trends.</p>
+      <p>They don’t wait to “go viral.”</p>
+      <p>They use proven ₵99 systems that turn attention into instant income — even without followers.</p>
+      <p>This isn’t luck. It’s a trigger — the missing link between content and cashflow.</p>
+      <p>If you’re serious about turning your phone into an income tool —</p>
+      <p><strong>Tap below and steal the exact system I used.</strong></p>
+    </div>
+
+   <button class="cta-button" onclick="payWithPaystack()">Pay ₵99 & Get The Playbook</button>
+
+<!-- Countdown Timer Starts Here -->
+<p class="disclaimer" id="countdown-timer">
+  This page expires in: <span id="timer">30:00</span>
+</p>
+<!-- Countdown Timer Ends Here -->
+
+
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script>
+    function payWithPaystack() {
+      var handler = PaystackPop.setup({
+        key: 'pk_live_bab6740832dad1a3a529102fc1ba88f07c60f647', // Replace with your actual public key
+        email: 'buyer@email.com',
+        amount: 9900,
+        currency: 'GHS',
+        callback: function(response){
+          window.location.href = 'https://drive.google.com/drive/folders/1QWv2k4Vq56R5ZbW12DC9NwcoyWrEoBgO';
+        },
+        onClose: function(){
+          alert('Payment was cancelled. Try again to unlock the playbook.');
+        }
+      });
+      handler.openIframe();
+    }
+  </script>
+  <script>
+  // Timer countdown logic
+  let timeInMinutes = 30;
+  let time = timeInMinutes * 60;
+  const timerElement = document.getElementById("timer");
+
+  function updateCountdown() {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    time--;
+
+    if (time < 0) {
+      clearInterval(countdown);
+      timerElement.textContent = "00:00";
+      // Optional: Disable the CTA button when time is up
+      const button = document.querySelector(".cta-button");
+      button.disabled = true;
+      button.style.opacity = "0.5";
+      button.innerText = "Offer Expired";
+    }
+  }
+
+  updateCountdown(); // initial call
+  const countdown = setInterval(updateCountdown, 1000);
+</script>
+
+
+</body>
+</html>
