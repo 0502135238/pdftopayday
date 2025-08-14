@@ -1,145 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>₵99 Playbook Offer</title>
-  <script src="https://js.paystack.co/v1/inline.js"></script>
-  <style>
-    body {
-      background-color: #0d0d0d;
-      color: #ffffff;
-      font-family: 'Segoe UI', sans-serif;
-      padding: 30px;
-      line-height: 1.6;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      margin-bottom: 20px;
-    }
-
-    #emailInput {
-      width: 100%;
-      padding: 14px;
-      font-size: 16px;
-      border-radius: 8px;
-      margin-top: 30px;
-      margin-bottom: 20px;
-      border: 1px solid #444;
-      background-color: #1a1a1a;
-      color: #fff;
-    }
-
-    button {
-      background-color: #e63946;
-      color: white;
-      padding: 14px 22px;
-      font-size: 18px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      width: 100%;
-      margin-top: 10px;
-    }
-
-    button:hover {
-      background-color: #d62828;
-    }
-
-    .timer {
-      font-size: 18px;
-      font-weight: bold;
-      color: red;
-      margin-top: 20px;
-      text-align: center;
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Beauty | Premium Makeup Services</title>
+    <style>
+        :root {
+            --primary: #f8c7cc;
+            --secondary: #333;
+            --accent: #d4a59a;
+            --light: #f9f3f0;
+            --text: #3a3a3a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.1)" d="M0,0 L100,0 L100,100 Q50,80 0,100 Z"></path></svg>') no-repeat bottom;
+            background-size: 100% 30%;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .logo::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background: white;
+        }
+        
+        .tagline {
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+        }
+        
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .booking-form {
+            background: white;
+            border-radius: 10px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--accent);
+            outline: none;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-img {
+            height: 200px;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+        
+        .service-content h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .service-content .price {
+            color: var(--accent);
+            font-weight: 600;
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            background: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+        
+        .confirmation {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        
+        .confirmation h2 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        .confirmation-icon {
+            font-size: 4rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .booking-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-  <h1>So… is it really possible to make ₵1,000 in 5 days?</h1>
-  <p>Honestly? Yes — but only if you know how value and attention work.</p>
-  <p>In the video, I told you how I went from broke — no job, just a cracked iPhone — to making over ₵1,000… by selling a simple digital product I made in one night.</p>
-  <p>No team. No capital. Just a system most people overlook.</p>
-
-  <hr/>
-
-  <p>The Truth?</p>
-  <p>Most broke people aren’t lazy. They’re just doing the right things in the wrong order.</p>
-  <p>I didn’t try to “hustle” hard. I just focused on 3 things:</p>
-  <ul>
-    <li>A specific need people already had</li>
-    <li>A fast way to deliver value (no stress)</li>
-    <li>A tiny monetization funnel that works even with 10 followers</li>
-  </ul>
-
-  <p>Now that you’ve seen the video… here’s what the quiet top 1% are doing differently:</p>
-  <p>They don’t chase trends. They don’t wait to “go viral.”</p>
-  <p>They use proven ₵99 systems that turn attention into instant income — even without followers.</p>
-
-  <p>If you’re serious about turning your phone into an income tool —</p>
-
-  <p><strong>Tap below and steal the exact system I used.</strong></p>
-
-  <input type="email" id="emailInput" placeholder="Enter your email to receive the playbook"/>
-
-  <button onclick="payWithPaystack()">Unlock the ₵99 System</button>
-
-  <div class="timer" id="countdown"></div>
-
-  <script>
-    function payWithPaystack() {
-      let email = document.getElementById('emailInput').value;
-
-      if (!email || !email.includes('@')) {
-        alert("Please enter a valid email address.");
-        return;
-      }
-
-      let handler = PaystackPop.setup({
-        key: 'pk_live_bab6740832dad1a3a529102fc1ba88f07c60f647',
-        email: email,
-        amount: 9900,
-        currency: "GHS",
-        callback: function(response) {
-          alert('Payment successful! Ref: ' + response.reference);
-          window.location.href = 'https://drive.google.com/drive/folders/1QWv2k4Vq56R5ZbW12DC9NwcoyWrEoBgO';
-        },
-        onClose: function() {
-          alert('Payment cancelled.');
-        }
-      });
-
-      handler.openIframe();
-    }
-
-    // Timer logic (30 minutes)
-    let duration = 30 * 60; // 30 minutes in seconds
-    const countdown = document.getElementById('countdown');
-
-    function updateTimer() {
-      const minutes = Math.floor(duration / 60);
-      const seconds = duration % 60;
-      countdown.textContent = `⏳ Offer expires in ${minutes}m ${seconds < 10 ? '0' : ''}${seconds}s`;
-
-      if (duration > 0) {
-        duration--;
-        setTimeout(updateTimer, 1000);
-      } else {
-        countdown.textContent = "⛔ Offer has expired.";
-      }
-    }
-
-    updateTimer();
-  </script>
-
+    <header>
+        <div class="container">
+            <div class="logo">LUXE BEAUTY</div>
+            <p class="tagline">Premium makeup artistry for your most memorable moments</p>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h2>Book Your Perfect Look</h2>
+            <p>Our professional makeup artists are ready to enhance your natural beauty for any occasion. Book your appointment below and let us create magic together.</p>
+            
+            <div class="booking-form" id="bookingForm">
+                <h3>Appointment Request</h3>
+                <form id="appointmentForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service</label>
+                        <select id="service" class="form-control" required>
+                            <option value="">Select a service</option>
+                            <option value="bridal">Bridal Makeup</option>
+                            <option value="event">Event Makeup</option>
+                            <option value="editorial">Editorial Makeup</option>
+                            <option value="lesson">Makeup Lesson</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Special Requests</label>
+                        <textarea id="message" class="form-control" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Book Appointment</button>
+                </form>
+            </div>
+            
+            <div class="confirmation" id="confirmation">
+                <div class="confirmation-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Appointment Request Received!</h2>
+                <p>Thank you for booking with Luxe Beauty. We've received your request and will contact you within 24 hours to confirm your appointment details.</p>
+                <button class="btn" id="newBooking">Book Another Appointment</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-img">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Bridal Makeup</h3>
+                    <p>Flawless makeup for your special day with trial session included.</p>
+                    <div class="price">From $250</div>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-img">
+                    <i class="fas fa-glass-cheers"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Event Makeup</h3>
+                    <p>Red carpet ready makeup for any special occasion.</p>
+                    <div class="price">From $150</div>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-img">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Editorial Makeup</h3>
+                    <p>Creative makeup for photoshoots and media productions.</p>
+                    <div class="price">From $200</div>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-img">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Makeup Lessons</h3>
+                    <p>Learn professional techniques for everyday beauty.</p>
+                    <div class="price">From $120</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Luxe Beauty. All rights reserved.</p>
+            <p style="margin-top: 1rem;">
+                <a href="#" style="color: var(--primary); margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+                <a href="#" style="color: var(--primary); margin: 0 10px;"><i class="fab fa-facebook"></i></a>
+                <a href="#" style="color: var(--primary); margin: 0 10px;"><i class="fab fa-pinterest"></i></a>
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('appointmentForm');
+            const bookingForm = document.getElementById('bookingForm');
+            const confirmation = document.getElementById('confirmation');
+            const newBookingBtn = document.getElementById('newBooking');
+            
+            // Set minimum date to today
+            const dateInput = document.getElementById('date');
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.setAttribute('min', today);
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Here you would normally send the data to a server
+                // For this demo, we'll just show the confirmation
+                
+                bookingForm.style.display = 'none';
+                confirmation.style.display = 'block';
+                
+                // Scroll to confirmation
+                confirmation.scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            newBookingBtn.addEventListener('click', function() {
+                confirmation.style.display = 'none';
+                bookingForm.style.display = 'block';
+                form.reset();
+                
+                // Scroll back to form
+                bookingForm.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
