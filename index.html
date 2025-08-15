@@ -3,390 +3,380 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxe Beauty | Premium Makeup Services</title>
+    <title>ASAP Plumbing & Civil Works | Accra's #1 Emergency Plumbers</title>
     <style>
         :root {
-            --primary: #f8c7cc;
-            --secondary: #333;
-            --accent: #d4a59a;
-            --light: #f9f3f0;
-            --text: #3a3a3a;
+            --electric-blue: #0066ff;
+            --plumber-orange: #ff6600;
+            --deep-purple: #6600cc;
+            --emergency-red: #ff0033;
+            --black-hole: #000022;
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Arial Black', sans-serif;
         }
         
         body {
-            background-color: var(--light);
-            color: var(--text);
-            line-height: 1.6;
+            background-color: var(--black-hole);
+            color: white;
+            overflow-x: hidden;
         }
         
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
-            padding: 2rem 0;
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            padding: 0 20px;
+            background: radial-gradient(circle, var(--deep-purple), var(--black-hole));
             position: relative;
             overflow: hidden;
         }
         
-        header::before {
+        .hero::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.1)" d="M0,0 L100,0 L100,100 Q50,80 0,100 Z"></path></svg>') no-repeat bottom;
-            background-size: 100% 30%;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="%23ffffff20" stroke-width="0.5"/></svg>');
+            background-size: 50px 50px;
+            opacity: 0.3;
         }
         
-        .logo {
-            font-size: 2.5rem;
-            font-weight: 300;
-            letter-spacing: 3px;
+        h1 {
+            font-size: 4rem;
             margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
+            background: linear-gradient(45deg, var(--electric-blue), var(--plumber-orange));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            transform: scale(1);
+            transition: transform 0.5s ease;
         }
         
-        .logo::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 2px;
-            background: white;
+        h1:hover {
+            transform: scale(1.05);
         }
         
         .tagline {
-            font-weight: 300;
+            font-size: 1.5rem;
             margin-bottom: 2rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 800px;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        .hero {
-            padding: 4rem 0;
-            text-align: center;
-        }
-        
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--secondary);
-        }
-        
-        .hero p {
-            max-width: 700px;
-            margin: 0 auto 2rem;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: var(--accent);
+        .cta-button {
+            background: linear-gradient(45deg, var(--emergency-red), var(--plumber-orange));
             color: white;
-            padding: 12px 30px;
             border: none;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
             cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 0, 51, 0.4);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
         }
         
-        .btn:hover {
-            background: var(--secondary);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .booking-form {
-            background: white;
-            border-radius: 10px;
-            padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            max-width: 600px;
-            margin: 2rem auto;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-        
-        .form-control {
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
             width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border 0.3s ease;
+            height: 100%;
+            background: linear-gradient(45deg, var(--plumber-orange), var(--emergency-red));
+            transition: all 0.4s ease;
+            z-index: -1;
         }
         
-        .form-control:focus {
-            border-color: var(--accent);
-            outline: none;
+        .cta-button:hover::before {
+            left: 0;
         }
         
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 0, 51, 0.6);
+        }
+        
+        .cta-button:active {
+            transform: translateY(1px);
+        }
+        
+        .services {
+            padding: 80px 20px;
+            background: var(--black-hole);
+            position: relative;
+        }
+        
+        .services::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to bottom, transparent, var(--deep-purple));
+            z-index: 1;
         }
         
         .service-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            background: rgba(0, 0, 34, 0.7);
+            border: 1px solid var(--electric-blue);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
         }
         
         .service-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
+            border-color: var(--plumber-orange);
         }
         
-        .service-img {
-            height: 200px;
-            background: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .service-card h3 {
+            color: var(--electric-blue);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .service-card p {
+            color: rgba(255,255,255,0.7);
+            line-height: 1.6;
+        }
+        
+        .emergency-bar {
+            background: linear-gradient(90deg, var(--emergency-red), var(--plumber-orange));
             color: white;
-            font-size: 3rem;
-        }
-        
-        .service-content {
-            padding: 1.5rem;
-        }
-        
-        .service-content h3 {
-            margin-bottom: 0.5rem;
-        }
-        
-        .service-content .price {
-            color: var(--accent);
-            font-weight: 600;
-            margin: 0.5rem 0;
-            font-size: 1.2rem;
-        }
-        
-        footer {
-            background: var(--secondary);
-            color: white;
+            padding: 15px;
             text-align: center;
-            padding: 2rem 0;
-            margin-top: 4rem;
+            font-weight: bold;
+            font-size: 1.3rem;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            animation: pulse 2s infinite;
+            cursor: pointer;
         }
         
-        .confirmation {
-            display: none;
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        
+        .pipe-animation {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M10,50 L90,50" stroke="%230066ff" stroke-width="10" stroke-linecap="round"/><circle cx="50" cy="50" r="20" fill="%23ff6600" stroke="%23ffffff" stroke-width="3"/></svg>') no-repeat;
+            opacity: 0.7;
+            animation: float 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(50vw, 20vh) rotate(90deg); }
+            50% { transform: translate(80vw, -10vh) rotate(180deg); }
+            75% { transform: translate(30vw, -20vh) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+        
+        .testimonials {
+            padding: 80px 20px;
+            background: linear-gradient(to bottom, var(--deep-purple), var(--black-hole));
             text-align: center;
-            padding: 2rem;
-            background: white;
+        }
+        
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            max-width: 600px;
-            margin: 2rem auto;
+            padding: 30px;
+            margin: 20px;
+            max-width: 500px;
+            display: inline-block;
+            transition: all 0.3s ease;
         }
         
-        .confirmation h2 {
-            color: var(--accent);
-            margin-bottom: 1rem;
+        .testimonial-card:hover {
+            transform: scale(1.05);
+            background: rgba(255,255,255,0.15);
         }
         
-        .confirmation-icon {
-            font-size: 4rem;
-            color: var(--accent);
-            margin-bottom: 1.5rem;
+        .contact {
+            padding: 80px 20px;
+            background: var(--black-hole);
+            text-align: center;
         }
         
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 2rem;
-            }
-            
-            .hero h2 {
-                font-size: 2rem;
-            }
-            
-            .booking-form {
-                padding: 1.5rem;
-            }
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid var(--electric-blue);
+            border-radius: 5px;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--plumber-orange);
+            box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+        }
+        
+        .water-drip {
+            position: absolute;
+            width: 20px;
+            height: 30px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 30"><path d="M10,0 Q15,10 10,20 Q5,30 10,30 Q15,30 10,20 Q5,10 10,0 Z" fill="%230066ff"/></svg>') no-repeat;
+            animation: drip 3s infinite ease-in;
+            opacity: 0;
+        }
+        
+        @keyframes drip {
+            0% { transform: translateY(-50px); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(100px); opacity: 0; }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">LUXE BEAUTY</div>
-            <p class="tagline">Premium makeup artistry for your most memorable moments</p>
-        </div>
-    </header>
+    <div class="hero">
+        <h1>ASAP PLUMBING & CIVIL WORKS</h1>
+        <p class="tagline">When your pipes scream for help, we come running faster than water through a burst main! Accra's most reliable emergency plumbers - fixing disasters 24/7 with a smile.</p>
+        <button class="cta-button" id="hero-cta">CALL NOW - WE'RE ON OUR WAY!</button>
+        
+        <!-- Floating pipe animations -->
+        <div class="pipe-animation" style="top: 20%; left: 10%;"></div>
+        <div class="pipe-animation" style="top: 70%; left: 80%; animation-delay: -5s;"></div>
+        <div class="pipe-animation" style="top: 30%; left: 60%; animation-delay: -10s;"></div>
+    </div>
     
-    <section class="hero">
-        <div class="container">
-            <h2>Book Your Perfect Look</h2>
-            <p>Our professional makeup artists are ready to enhance your natural beauty for any occasion. Book your appointment below and let us create magic together.</p>
-            
-            <div class="booking-form" id="bookingForm">
-                <h3>Appointment Request</h3>
-                <form id="appointmentForm">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Service</label>
-                        <select id="service" class="form-control" required>
-                            <option value="">Select a service</option>
-                            <option value="bridal">Bridal Makeup</option>
-                            <option value="event">Event Makeup</option>
-                            <option value="editorial">Editorial Makeup</option>
-                            <option value="lesson">Makeup Lesson</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="date">Preferred Date</label>
-                        <input type="date" id="date" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Special Requests</label>
-                        <textarea id="message" class="form-control" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="btn">Book Appointment</button>
-                </form>
-            </div>
-            
-            <div class="confirmation" id="confirmation">
-                <div class="confirmation-icon">
-                    <i class="fas fa-check-circle"></i>
-                </div>
-                <h2>Appointment Request Received!</h2>
-                <p>Thank you for booking with Luxe Beauty. We've received your request and will contact you within 24 hours to confirm your appointment details.</p>
-                <button class="btn" id="newBooking">Book Another Appointment</button>
-            </div>
+    <div class="services">
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: var(--plumber-orange);">WE DON'T JUST FIX PIPES - WE SAVE HOMES!</h2>
+        
+        <div class="service-card">
+            <h3>EMERGENCY PLUMBING</h3>
+            <p>Burst pipe? Toilet overflowing? We'll be there before you can say "water damage"! Our rapid response team handles emergencies 24/7 because disasters don't wait for business hours.</p>
         </div>
-    </section>
+        
+        <div class="service-card">
+            <h3>CIVIL ENGINEERING SOLUTIONS</h3>
+            <p>From drainage systems to water supply networks, we build infrastructure that lasts. Our civil works don't just meet standards - they set them.</p>
+        </div>
+        
+        <div class="service-card">
+            <h3>PREVENTATIVE MAINTENANCE</h3>
+            <p>Don't wait for the flood! Our maintenance plans keep your plumbing in top shape, saving you from expensive emergencies and sleepless nights.</p>
+        </div>
+    </div>
     
-    <section class="container">
-        <h2 style="text-align: center; margin-bottom: 2rem;">Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-img">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <div class="service-content">
-                    <h3>Bridal Makeup</h3>
-                    <p>Flawless makeup for your special day with trial session included.</p>
-                    <div class="price">From $250</div>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-img">
-                    <i class="fas fa-glass-cheers"></i>
-                </div>
-                <div class="service-content">
-                    <h3>Event Makeup</h3>
-                    <p>Red carpet ready makeup for any special occasion.</p>
-                    <div class="price">From $150</div>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-img">
-                    <i class="fas fa-camera"></i>
-                </div>
-                <div class="service-content">
-                    <h3>Editorial Makeup</h3>
-                    <p>Creative makeup for photoshoots and media productions.</p>
-                    <div class="price">From $200</div>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-img">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="service-content">
-                    <h3>Makeup Lessons</h3>
-                    <p>Learn professional techniques for everyday beauty.</p>
-                    <div class="price">From $120</div>
-                </div>
-            </div>
+    <div class="testimonials">
+        <h2 style="margin-bottom: 50px; color: var(--electric-blue);">WHAT OUR CLIENTS SAY (WHILE DANCING WITH JOY)</h2>
+        
+        <div class="testimonial-card">
+            <p>"ASAP arrived at 2 AM when my bathroom was becoming an indoor pool. Not only did they fix it fast, they cleaned up everything! These guys are plumbing superheroes!"</p>
+            <p><strong>- Nana Yaa, East Legon</strong></p>
         </div>
-    </section>
+        
+        <div class="testimonial-card">
+            <p>"I've used many plumbers in Accra - none compare to ASAP. They explain everything, show up on time, and their prices are fair. My plumbing nightmares are over!"</p>
+            <p><strong>- Kwame, Cantonments</strong></p>
+        </div>
+    </div>
     
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Luxe Beauty. All rights reserved.</p>
-            <p style="margin-top: 1rem;">
-                <a href="#" style="color: var(--primary); margin: 0 10px;"><i class="fab fa-instagram"></i></a>
-                <a href="#" style="color: var(--primary); margin: 0 10px;"><i class="fab fa-facebook"></i></a>
-                <a href="#" style="color: var(--primary); margin: 0 10px;"><i class="fab fa-pinterest"></i></a>
-            </p>
+    <div class="contact">
+        <h2 style="margin-bottom: 30px; color: var(--plumber-orange);">READY TO END YOUR PLUMBING PAIN?</h2>
+        <p style="margin-bottom: 50px; font-size: 1.2rem;">Fill this form and we'll respond faster than water pressure drops when all your neighbors shower at once!</p>
+        
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="tel" placeholder="Phone Number (We promise not to flood you with calls)" required>
+            <input type="email" placeholder="Email (Optional but helpful)">
+            <textarea placeholder="Describe your plumbing emergency (or just scream HELP!)" rows="4" required></textarea>
+            <button class="cta-button" type="submit">SEND HELP NOW!</button>
         </div>
-    </footer>
+    </div>
+    
+    <div class="emergency-bar" id="emergency-bar">
+        <span>🚨 EMERGENCY? CALL NOW: 0244-XXX-XXX 🚨</span>
+    </div>
     
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('appointmentForm');
-            const bookingForm = document.getElementById('bookingForm');
-            const confirmation = document.getElementById('confirmation');
-            const newBookingBtn = document.getElementById('newBooking');
+        // Create water drip effects randomly
+        function createWaterDrip() {
+            const drip = document.createElement('div');
+            drip.className = 'water-drip';
+            drip.style.left = Math.random() * 100 + 'vw';
+            document.body.appendChild(drip);
             
-            // Set minimum date to today
-            const dateInput = document.getElementById('date');
-            const today = new Date().toISOString().split('T')[0];
-            dateInput.setAttribute('min', today);
+            // Remove after animation completes
+            setTimeout(() => {
+                drip.remove();
+            }, 3000);
+        }
+        
+        // Create drips periodically
+        setInterval(createWaterDrip, 500);
+        
+        // Make emergency bar shake on hover
+        const emergencyBar = document.getElementById('emergency-bar');
+        emergencyBar.addEventListener('mouseover', () => {
+            emergencyBar.style.animation = 'none';
+            void emergencyBar.offsetWidth; // Trigger reflow
+            emergencyBar.style.animation = 'pulse 0.5s infinite';
+        });
+        
+        emergencyBar.addEventListener('mouseout', () => {
+            emergencyBar.style.animation = 'pulse 2s infinite';
+        });
+        
+        // Make CTA button even more attention-grabbing
+        const ctaButton = document.getElementById('hero-cta');
+        setInterval(() => {
+            ctaButton.style.boxShadow = `0 5px 25px rgba(255, 0, 51, ${0.4 + Math.random() * 0.3})`;
+        }, 1000);
+        
+        // Add pipe animations when scrolling
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const pipes = document.querySelectorAll('.pipe-animation');
             
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Here you would normally send the data to a server
-                // For this demo, we'll just show the confirmation
-                
-                bookingForm.style.display = 'none';
-                confirmation.style.display = 'block';
-                
-                // Scroll to confirmation
-                confirmation.scrollIntoView({ behavior: 'smooth' });
+            pipes.forEach((pipe, index) => {
+                pipe.style.transform = `translate(${Math.sin(scrollY / 200 + index) * 20}px, ${Math.cos(scrollY / 200 + index) * 20}px) rotate(${scrollY / 10}deg)`;
             });
-            
-            newBookingBtn.addEventListener('click', function() {
-                confirmation.style.display = 'none';
-                bookingForm.style.display = 'block';
-                form.reset();
-                
-                // Scroll back to form
-                bookingForm.scrollIntoView({ behavior: 'smooth' });
-            });
+        });
+        
+        // Emergency bar click handler
+        emergencyBar.addEventListener('click', () => {
+            alert("🚑 EMERGENCY PLUMBER DISPATCHED! We're on our way - keep your phone close!");
         });
     </script>
 </body>
