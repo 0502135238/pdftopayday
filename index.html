@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASAP Plumbing & Civil Works | Accra's Premium Plumbing Service</title>
+    <title>GW Plumbing Works | Excellence in Plumbing & Civil Engineering</title>
     <style>
         :root {
-            --platinum: #e5e4e2;
-            --champagne: #f7e7ce;
-            --taupe: #483c32;
-            --slate: #708090;
-            --bronze: #cd7f32;
+            --navy: #0a1f44;
+            --gold: #d4af37;
+            --ivory: #f8f4e9;
+            --slate: #6e7f8d;
+            --charcoal: #2a2d34;
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Cormorant Garamond', serif;
         }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap');
         
         body {
-            background-color: #f9f9f9;
-            color: var(--taupe);
+            background-color: var(--ivory);
+            color: var(--charcoal);
             overflow-x: hidden;
-            line-height: 1.6;
+            line-height: 1.8;
         }
-        
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
         
         .hero {
             height: 100vh;
@@ -36,22 +36,21 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 20px;
-            background: linear-gradient(135deg, rgba(245,245,245,0.95), rgba(230,230,230,0.95)), url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+            padding: 0 5%;
+            background: linear-gradient(rgba(10, 31, 68, 0.85), rgba(10, 31, 68, 0.85)), 
+                        url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
             background-size: cover;
+            color: var(--ivory);
             position: relative;
-            overflow: hidden;
         }
         
         h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             margin-bottom: 1.5rem;
-            color: var(--taupe);
             font-weight: 600;
             letter-spacing: -1px;
             transform: translateY(0);
             transition: transform 0.5s ease;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
         }
         
         h1:hover {
@@ -59,28 +58,28 @@
         }
         
         .tagline {
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.3rem;
             margin-bottom: 3rem;
-            color: var(--slate);
+            color: rgba(248, 244, 233, 0.9);
             max-width: 700px;
             font-weight: 300;
-            line-height: 1.8;
         }
         
         .cta-button {
-            background: var(--taupe);
-            color: var(--platinum);
-            border: none;
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
             padding: 18px 36px;
             font-size: 1.1rem;
             font-weight: 500;
-            border-radius: 2px;
+            border-radius: 0;
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
             letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .cta-button::before {
@@ -90,8 +89,8 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: var(--bronze);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background: var(--gold);
+            transition: all 0.4s ease;
             z-index: -1;
         }
         
@@ -100,27 +99,22 @@
         }
         
         .cta-button:hover {
+            color: var(--navy);
             transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-            color: white;
-        }
-        
-        .cta-button:active {
-            transform: translateY(1px);
         }
         
         .services {
-            padding: 100px 20px;
-            background: white;
+            padding: 100px 5%;
+            background: var(--ivory);
             position: relative;
         }
         
         .section-title {
             text-align: center;
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             margin-bottom: 70px;
-            color: var(--taupe);
-            font-weight: 500;
+            color: var(--navy);
+            font-weight: 600;
             position: relative;
         }
         
@@ -132,42 +126,44 @@
             transform: translateX(-50%);
             width: 80px;
             height: 2px;
-            background: var(--bronze);
+            background: var(--gold);
         }
         
         .service-card {
             background: white;
-            border: 1px solid rgba(0,0,0,0.05);
-            border-radius: 4px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 0;
             padding: 40px 30px;
             margin-bottom: 30px;
             transition: all 0.4s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
             text-align: center;
+            border-top: 3px solid transparent;
         }
         
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-            border-bottom: 3px solid var(--bronze);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            border-top: 3px solid var(--gold);
         }
         
         .service-card h3 {
-            color: var(--taupe);
+            color: var(--navy);
             margin-bottom: 20px;
             font-size: 1.5rem;
-            font-weight: 500;
+            font-weight: 600;
         }
         
         .service-card p {
             color: var(--slate);
             line-height: 1.8;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 300;
         }
         
         .service-icon {
             font-size: 2.5rem;
-            color: var(--bronze);
+            color: var(--gold);
             margin-bottom: 20px;
             display: inline-block;
             transition: transform 0.3s ease;
@@ -177,79 +173,62 @@
             transform: scale(1.1);
         }
         
-        .emergency-bar {
-            background: var(--taupe);
-            color: var(--platinum);
-            padding: 18px;
-            text-align: center;
-            font-weight: 400;
-            font-size: 1.1rem;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            z-index: 100;
-            transition: all 0.3s ease;
-            border-top: 2px solid var(--bronze);
-        }
-        
-        .emergency-bar:hover {
-            background: var(--bronze);
-            color: white;
-        }
-        
         .testimonials {
-            padding: 100px 20px;
-            background: linear-gradient(135deg, rgba(245,245,245,0.95), rgba(230,230,230,0.95)), url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+            padding: 100px 5%;
+            background: linear-gradient(rgba(10, 31, 68, 0.9), rgba(10, 31, 68, 0.9)), 
+                        url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
             background-size: cover;
             text-align: center;
+            color: var(--ivory);
         }
         
         .testimonial-card {
-            background: rgba(255,255,255,0.9);
-            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 0;
             padding: 40px;
             margin: 20px;
             max-width: 500px;
             display: inline-block;
             transition: all 0.4s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            backdrop-filter: blur(5px);
+            border-left: 3px solid var(--gold);
             text-align: left;
-            border-left: 3px solid var(--bronze);
         }
         
         .testimonial-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.15);
         }
         
         .testimonial-text {
             font-style: italic;
-            color: var(--slate);
+            color: rgba(248, 244, 233, 0.9);
             margin-bottom: 20px;
             font-weight: 300;
             position: relative;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .testimonial-text::before {
             content: '"';
             font-size: 4rem;
-            color: var(--bronze);
-            opacity: 0.2;
+            color: var(--gold);
+            opacity: 0.3;
             position: absolute;
-            top: -20px;
+            top: -30px;
             left: -15px;
             font-family: serif;
         }
         
         .testimonial-author {
-            color: var(--taupe);
+            color: var(--gold);
             font-weight: 500;
+            font-family: 'Cormorant Garamond', serif;
         }
         
         .contact {
-            padding: 100px 20px;
-            background: white;
+            padding: 100px 5%;
+            background: var(--ivory);
             text-align: center;
         }
         
@@ -263,46 +242,42 @@
             width: 100%;
             padding: 15px;
             margin-bottom: 25px;
-            background: rgba(0,0,0,0.02);
-            border: 1px solid rgba(0,0,0,0.1);
-            border-radius: 2px;
-            color: var(--taupe);
+            background: rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 0;
+            color: var(--charcoal);
             font-size: 1rem;
             transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .contact-form input:focus,
         .contact-form textarea:focus {
             outline: none;
-            border-color: var(--bronze);
+            border-color: var(--gold);
             background: white;
-            box-shadow: 0 0 0 1px var(--bronze);
         }
         
-        .water-flow {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
+        .emergency-bar {
+            background: var(--navy);
+            color: var(--ivory);
+            padding: 18px;
+            text-align: center;
+            font-weight: 400;
+            font-size: 1.1rem;
+            position: fixed;
+            bottom: 0;
             left: 0;
-            pointer-events: none;
-            overflow: hidden;
-            z-index: 0;
+            width: 100%;
+            z-index: 100;
+            transition: all 0.3s ease;
+            border-top: 2px solid var(--gold);
+            font-family: 'Montserrat', sans-serif;
         }
         
-        .water-line {
-            position: absolute;
-            height: 1px;
-            background: rgba(205, 127, 50, 0.2);
-            transform-origin: left center;
-            animation: flow 15s linear infinite;
-        }
-        
-        @keyframes flow {
-            0% { transform: scaleX(0); opacity: 0; }
-            10% { opacity: 0.3; }
-            90% { opacity: 0.3; }
-            100% { transform: scaleX(1); opacity: 0; }
+        .emergency-bar:hover {
+            background: var(--gold);
+            color: var(--navy);
         }
         
         @media (max-width: 768px) {
@@ -318,95 +293,66 @@
 </head>
 <body>
     <div class="hero">
-        <div class="water-flow" id="water-flow"></div>
-        <h1>ASAP PLUMBING & CIVIL WORKS</h1>
-        <p class="tagline">Premium plumbing solutions for discerning clients in Accra. Where exceptional craftsmanship meets uncompromising reliability - because your home deserves nothing less.</p>
-        <button class="cta-button" id="hero-cta">REQUEST CONSULTATION</button>
+        <h1>GW PLUMBING WORKS</h1>
+        <p class="tagline">Precision-engineered plumbing solutions for luxury residences and commercial spaces. Where excellence flows as naturally as water.</p>
+        <button class="cta-button" id="hero-cta">REQUEST A CONSULTATION</button>
     </div>
     
     <div class="services">
-        <h2 class="section-title">OUR REFINED SERVICES</h2>
+        <h2 class="section-title">OUR SERVICES</h2>
         
         <div class="service-card">
-            <div class="service-icon">🚰</div>
-            <h3>Luxury Plumbing Installations</h3>
-            <p>From designer bathrooms to gourmet kitchens, we implement plumbing solutions that complement your high-end lifestyle with precision and discretion.</p>
+            <div class="service-icon">💎</div>
+            <h3>Luxury Residential Plumbing</h3>
+            <p>From penthouse bathrooms to bespoke kitchen installations, we deliver flawless plumbing systems designed for high-end living.</p>
         </div>
         
         <div class="service-card">
-            <div class="service-icon">🏗️</div>
-            <h3>Architectural Civil Works</h3>
-            <p>Collaborating with Accra's finest architects to create infrastructure that blends seamlessly with your vision while exceeding engineering standards.</p>
+            <div class="service-icon">🏢</div>
+            <h3>Commercial & Industrial Solutions</h3>
+            <p>Engineered systems for hotels, offices, and industrial facilities that prioritize efficiency and long-term reliability.</p>
         </div>
         
         <div class="service-card">
             <div class="service-icon">🔧</div>
-            <h3>Concierge Maintenance</h3>
-            <p>Our discreet, scheduled maintenance ensures your plumbing systems operate with silent efficiency, preventing disruptions to your daily life.</p>
+            <h3>White-Glove Maintenance</h3>
+            <p>Discreet, scheduled service plans that ensure your plumbing operates silently and seamlessly—because excellence requires no attention.</p>
         </div>
     </div>
     
     <div class="testimonials">
-        <h2 class="section-title">CLIENT TESTIMONIALS</h2>
+        <h2 class="section-title" style="color: var(--ivory);">CLIENT TESTIMONIALS</h2>
         
         <div class="testimonial-card">
-            <p class="testimonial-text">ASAP transformed our penthouse plumbing with such attention to detail that even our architect was impressed. They worked around our schedule and left the place spotless.</p>
-            <p class="testimonial-author">- Mrs. Abena Asante, Airport Residential Area</p>
+            <p class="testimonial-text">GW Plumbing transformed our luxury villa’s plumbing system with impeccable craftsmanship. Their attention to detail was extraordinary.</p>
+            <p class="testimonial-author">— Mr. Kwame Mensah, Trasacco Valley</p>
         </div>
         
         <div class="testimonial-card">
-            <p class="testimonial-text">What sets ASAP apart is their professionalism. They arrived precisely on time, wore protective coverings, and solved our complex drainage issue without any mess.</p>
-            <p class="testimonial-author">- Dr. Kwame Ofori, East Legon</p>
+            <p class="testimonial-text">Working with GW Plumbing was a seamless experience. They understood our architectural vision and executed flawlessly.</p>
+            <p class="testimonial-author">— Arch. Ama Serwaa, Design Collaborative</p>
         </div>
     </div>
     
     <div class="contact">
-        <h2 class="section-title">SCHEDULE YOUR CONSULTATION</h2>
-        <p style="margin-bottom: 50px; color: var(--slate); max-width: 600px; margin-left: auto; margin-right: auto;">Complete this form and our project coordinator will contact you within 24 hours to discuss your requirements in complete confidence.</p>
+        <h2 class="section-title">CONTACT US</h2>
+        <p style="margin-bottom: 50px; color: var(--slate); max-width: 600px; margin-left: auto; margin-right: auto;">Let’s discuss how we can elevate your property’s plumbing systems. Our team responds within 24 hours.</p>
         
         <div class="contact-form">
             <input type="text" placeholder="Your Name" required>
             <input type="tel" placeholder="Contact Number" required>
             <input type="email" placeholder="Email Address">
-            <textarea placeholder="Brief Description of Your Project Needs" rows="5" required></textarea>
-            <button class="cta-button" type="submit">SUBMIT REQUEST</button>
+            <textarea placeholder="Tell us about your project" rows="5" required></textarea>
+            <button class="cta-button" type="submit" style="border-color: var(--navy); color: var(--navy);">SUBMIT INQUIRY</button>
         </div>
     </div>
     
     <div class="emergency-bar" id="emergency-bar">
-        <span>For immediate assistance: 0244-XXX-XXX | Available 24/7 for premium clients</span>
+        <span>For immediate assistance: 0244-XXX-XXX | Premium emergency service available 24/7</span>
     </div>
     
     <script>
-        // Create elegant water flow lines
-        function createWaterFlow() {
-            const container = document.getElementById('water-flow');
-            const lineCount = 8;
-            
-            for (let i = 0; i < lineCount; i++) {
-                const line = document.createElement('div');
-                line.className = 'water-line';
-                
-                // Random positioning and timing
-                const topPos = Math.random() * 100;
-                const delay = Math.random() * 15;
-                const duration = 10 + Math.random() * 10;
-                const width = 30 + Math.random() * 70;
-                
-                line.style.top = `${topPos}%`;
-                line.style.width = `${width}%`;
-                line.style.left = `${10 + Math.random() * 10}%`;
-                line.style.animationDelay = `${-delay}s`;
-                line.style.animationDuration = `${duration}s`;
-                
-                container.appendChild(line);
-            }
-        }
-        
-        // Initialize water flow on load
-        window.addEventListener('load', createWaterFlow);
-        
-        // Smooth scroll to sections
+        // Smooth scroll for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -419,14 +365,14 @@
         // Emergency bar interaction
         const emergencyBar = document.getElementById('emergency-bar');
         emergencyBar.addEventListener('click', () => {
-            alert("Our premium emergency response team has been notified. A project manager will contact you immediately.");
+            alert("Our premium emergency response team has been notified. A senior plumber will contact you within 15 minutes.");
         });
         
-        // Subtle hover effect for service cards
+        // Service card hover effects
         const serviceCards = document.querySelectorAll('.service-card');
         serviceCards.forEach(card => {
             card.addEventListener('mouseenter', () => {
-                card.querySelector('.service-icon').style.transform = 'rotate(10deg) scale(1.1)';
+                card.querySelector('.service-icon').style.transform = 'rotate(5deg) scale(1.1)';
             });
             card.addEventListener('mouseleave', () => {
                 card.querySelector('.service-icon').style.transform = 'rotate(0) scale(1)';
@@ -438,7 +384,7 @@
         if (contactForm) {
             contactForm.addEventListener('submit', (e) => {
                 e.preventDefault();
-                alert("Thank you for your request. Our concierge team will contact you shortly to arrange your consultation.");
+                alert("Thank you for your inquiry. A GW Plumbing consultant will contact you shortly.");
                 contactForm.reset();
             });
         }
